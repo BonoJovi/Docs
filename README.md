@@ -9,8 +9,9 @@ Docs/
 ├── draft/  # Work-in-progress drafts (all languages)
 ├── en/     # English articles (published/ready)
 ├── ja/     # Japanese articles (published/ready) 日本語記事
-├── it/     # Italian articles (future)
-└── fr/     # French articles (future)
+├── it/     # Articoli italiani (futuro)
+├── fr/     # Articles français (futur)
+└── du/     # Deutschland Artikel (zukünftig)
 ```
 
 ### Workflow
@@ -30,10 +31,11 @@ This repository contains:
 
 ## Language
 
-- **Japanese** (`ja/`): Primary content for Qiita and Japanese tech communities
+- **Japanese** (`ja/`): Qiitaおよび日本の技術コミュニティ向け主要コンテンツ
 - **English** (`en/`): Translations and English-first content
-- **Italian** (`it/`): Future content (planned)
-- **French** (`fr/`): Future content (planned)
+- **Italiano** (`it/`): Contenuti futuri (in programma)
+- **Français** (`fr/`) : Contenu à venir (prévu)
+- **Deutschland** (`du/`): Zukünftige Inhalte (geplant)
 
 ## Author
 
