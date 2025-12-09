@@ -1,0 +1,22 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+.*.swp
+.*.swo
+
+# IDE
+.vscode/
+.idea/
+
+# Backup files
+*.bak
+*.tmp
+
+# Private/Draft files (if needed)
+# private/
+# drafts/
