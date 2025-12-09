@@ -532,4 +532,4 @@ grep -r "CI/CD" .ai-context --include="*.md"
 
 この記事が、あなたのAI開発をよりスムーズにする助けになれば幸いです。
 
-質問やフィードバックは、コメント欄または [GitHub Discussions](https://github.com/BonoJovi/Promps/discussions) でお待ちしています！
+質問やフィードバックは、コメント欄または [GitHub Issue](https://github.com/BonoJovi/Promps/issues) でお待ちしています！
