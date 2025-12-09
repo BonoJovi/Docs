@@ -6,9 +6,19 @@ Technical articles and documentation by Yoshihiro NAKAHARA.
 
 ```
 Docs/
-├── en/     # English articles
-└── ja/     # Japanese articles (日本語記事)
+├── draft/  # Work-in-progress drafts (all languages)
+├── en/     # English articles (published/ready)
+├── ja/     # Japanese articles (published/ready) 日本語記事
+├── it/     # Italian articles (future)
+└── fr/     # French articles (future)
 ```
+
+### Workflow
+
+1. **Draft**: Start writing in `draft/` directory
+2. **Review**: Edit and refine content
+3. **Publish**: Move completed article to appropriate language directory (`ja/`, `en/`, etc.)
+4. **Commit**: Git commit and push to GitHub
 
 ## Content
 
@@ -22,6 +32,8 @@ This repository contains:
 
 - **Japanese** (`ja/`): Primary content for Qiita and Japanese tech communities
 - **English** (`en/`): Translations and English-first content
+- **Italian** (`it/`): Future content (planned)
+- **French** (`fr/`): Future content (planned)
 
 ## Author
 
