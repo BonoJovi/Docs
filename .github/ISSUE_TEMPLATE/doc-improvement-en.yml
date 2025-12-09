@@ -1,0 +1,102 @@
+name: 💡 Documentation Improvement Proposal
+description: Suggest improvements to existing documentation
+title: "[Improvement] "
+labels: ["documentation", "enhancement", "en"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing an improvement to our documentation.
+        We appreciate your suggestions to make our documentation better.
+
+  - type: dropdown
+    id: doc-language
+    attributes:
+      label: Target Document Language
+      description: Select the language of the document to be improved
+      options:
+        - Japanese (ja/)
+        - English (en/)
+        - Draft (draft/)
+        - Overall improvement
+    validations:
+      required: true
+
+  - type: input
+    id: doc-path
+    attributes:
+      label: Document Path
+      description: Enter the path to the document to be improved (if multiple, provide a representative one)
+      placeholder: "e.g., en/technical-articles/rust-intro.md"
+
+  - type: dropdown
+    id: improvement-type
+    attributes:
+      label: Type of Improvement
+      description: Select the most appropriate option
+      options:
+        - Add or expand explanations
+        - Improve structure or organization
+        - Add or improve examples
+        - Add diagrams or illustrations
+        - Improve readability
+        - Improve accessibility
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: Current Issues
+      description: Describe what you find lacking in the current documentation
+      placeholder: |
+        Example:
+        - Lacks beginner-friendly explanations
+        - Too few code examples, making practical usage unclear
+        - No diagrams, making concepts hard to understand
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: Proposed Improvement
+      description: Please provide a specific proposal for how to improve the documentation
+      placeholder: |
+        Example:
+        - Add a section explaining fundamental concepts
+        - Add 3 code examples showing practical use cases
+        - Add an architecture diagram to show the overall picture
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-benefit
+    attributes:
+      label: Expected Benefits
+      description: Describe the benefits readers would gain from this improvement
+      placeholder: |
+        Example:
+        - Makes it easier for beginners to understand
+        - Provides useful reference during implementation
+        - Makes it easier to grasp the overall flow
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other helpful information (optional)
+      placeholder: |
+        - Reference documentation to consider
+        - Related discussions
+        - Other supplementary information
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution Interest
+      description: Regarding contributing to this improvement (optional)
+      options:
+        - label: I am willing to create a Pull Request for this improvement
+          required: false

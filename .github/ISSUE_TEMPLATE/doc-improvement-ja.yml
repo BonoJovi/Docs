@@ -1,0 +1,102 @@
+name: 💡 ドキュメントの改善提案
+description: 既存ドキュメントの改善アイデアを提案
+title: "[Improvement] "
+labels: ["documentation", "enhancement", "ja"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ドキュメントの改善提案をありがとうございます。
+        より良いドキュメントにするためのご意見をお聞かせください。
+
+  - type: dropdown
+    id: doc-language
+    attributes:
+      label: 対象ドキュメントの言語
+      description: 改善対象のドキュメントの言語を選択してください
+      options:
+        - 日本語 (ja/)
+        - 英語 (en/)
+        - ドラフト (draft/)
+        - 全体的な改善
+    validations:
+      required: true
+
+  - type: input
+    id: doc-path
+    attributes:
+      label: ドキュメントのパス
+      description: 改善対象のドキュメントファイルのパスを記入してください（複数の場合は代表的なもの）
+      placeholder: "例：ja/技術記事/Rust入門.md"
+
+  - type: dropdown
+    id: improvement-type
+    attributes:
+      label: 改善の種類
+      description: 最も適切なものを選択してください
+      options:
+        - 説明の追加・拡充
+        - 構成・構造の改善
+        - 例の追加・改善
+        - 図表の追加
+        - 読みやすさの向上
+        - アクセシビリティの改善
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: 現状の問題点
+      description: 現在のドキュメントで不十分だと感じる点を教えてください
+      placeholder: |
+        例：
+        - 初心者向けの説明が不足している
+        - コード例が少なく、実践的な使い方がわかりにくい
+        - 図がなく、概念の理解が難しい
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: 改善提案
+      description: どのように改善すべきか、具体的な提案をお願いします
+      placeholder: |
+        例：
+        - 基本的な概念の説明セクションを追加する
+        - より実践的なユースケースのコード例を3つ追加する
+        - アーキテクチャ図を追加して全体像を示す
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-benefit
+    attributes:
+      label: 期待される効果
+      description: この改善によって、読者にどのようなメリットがあるかを教えてください
+      placeholder: |
+        例：
+        - 初心者でも理解しやすくなる
+        - 実装時の参考になる
+        - 全体の流れが把握しやすくなる
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 追加情報
+      description: 参考になる情報があれば記入してください（任意）
+      placeholder: |
+        - 参考にすべき他のドキュメント
+        - 関連する議論
+        - その他の補足情報
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 貢献意欲
+      description: この改善への貢献について（任意）
+      options:
+        - label: この改善のためのPull Requestを作成する意思があります
+          required: false

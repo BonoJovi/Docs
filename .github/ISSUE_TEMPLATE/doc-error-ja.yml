@@ -1,0 +1,96 @@
+name: 🐛 ドキュメントの誤り報告
+description: ドキュメント内の誤字、技術的な誤り、リンク切れなどを報告
+title: "[Doc Error] "
+labels: ["documentation", "bug", "ja"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ドキュメント内の誤りを報告していただきありがとうございます。
+        以下の項目をご記入ください。
+
+  - type: dropdown
+    id: doc-language
+    attributes:
+      label: ドキュメントの言語
+      description: 問題があるドキュメントの言語を選択してください
+      options:
+        - 日本語 (ja/)
+        - 英語 (en/)
+        - ドラフト (draft/)
+        - その他
+    validations:
+      required: true
+
+  - type: input
+    id: doc-path
+    attributes:
+      label: ドキュメントのパス
+      description: 問題があるドキュメントファイルのパスを記入してください（例：ja/技術記事/example.md）
+      placeholder: "例：ja/技術記事/Rust入門.md"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: error-type
+    attributes:
+      label: 誤りの種類
+      description: 最も適切なものを選択してください
+      options:
+        - 誤字・脱字
+        - 技術的な誤り
+        - リンク切れ
+        - コードサンプルの誤り
+        - 情報が古い
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: 現在の内容（誤っている部分）
+      description: 問題がある箇所を引用してください
+      placeholder: |
+        例：
+        ```
+        let x = 5
+        x = 10 // この行はコンパイルエラーになります
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-content
+    attributes:
+      label: 正しいと思われる内容
+      description: どのように修正すべきか提案してください
+      placeholder: |
+        例：
+        ```
+        let mut x = 5
+        x = 10 // mutキーワードが必要です
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 追加情報
+      description: その他、参考になる情報があれば記入してください（任意）
+      placeholder: |
+        - 参考リンク
+        - スクリーンショット
+        - その他の補足情報
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 確認事項
+      description: 報告前に以下をご確認ください
+      options:
+        - label: 既存のIssueに同じ報告がないことを確認しました
+          required: true
+        - label: ドキュメントの最新版を確認しました
+          required: true

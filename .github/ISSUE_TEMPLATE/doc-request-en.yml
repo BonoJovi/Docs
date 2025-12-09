@@ -1,0 +1,119 @@
+name: 📝 New Documentation Request
+description: Request creation of new documentation
+title: "[Doc Request] "
+labels: ["documentation", "request", "en"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for requesting new documentation.
+        Please tell us about the documentation you'd like to see created.
+
+  - type: dropdown
+    id: doc-language
+    attributes:
+      label: Preferred Language
+      description: In which language would you like the documentation
+      options:
+        - Japanese (ja/)
+        - English (en/)
+        - Both
+    validations:
+      required: true
+
+  - type: input
+    id: doc-title
+    attributes:
+      label: Document Title
+      description: Enter the title for the requested documentation
+      placeholder: "e.g., Introduction to Error Handling in Rust"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: doc-category
+    attributes:
+      label: Document Category
+      description: Select the most appropriate category
+      options:
+        - Technical article
+        - Tutorial
+        - Guide
+        - Reference
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: doc-purpose
+    attributes:
+      label: Purpose of Documentation
+      description: Why is this documentation needed?
+      placeholder: |
+        Example:
+        - There's no comprehensive documentation on Rust error handling
+        - Want to collect common pitfalls for beginners
+        - Need to introduce practical patterns
+    validations:
+      required: true
+
+  - type: textarea
+    id: doc-scope
+    attributes:
+      label: Desired Content
+      description: What specific content should be included?
+      placeholder: |
+        Example:
+        - Basic usage of Result and Option types
+        - How to define error types
+        - Usage of the thiserror crate
+        - Practical error handling patterns
+        - Common mistakes and how to avoid them
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Select the target audience for this documentation
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+        - All levels
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-resources
+    attributes:
+      label: Related Resources
+      description: Add any helpful links or resources (optional)
+      placeholder: |
+        - Official documentation
+        - Reference articles
+        - Related books
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgently is this documentation needed?
+      options:
+        - High (needed immediately)
+        - Medium (preferably soon)
+        - Low (when time permits)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution Interest
+      description: Regarding contributing to this documentation (optional)
+      options:
+        - label: I am willing to create a draft and submit a Pull Request
+          required: false
+        - label: I can help with review and suggestions
+          required: false

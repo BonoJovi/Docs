@@ -1,0 +1,96 @@
+name: 🐛 Documentation Error Report
+description: Report typos, technical errors, broken links, or other issues in documentation
+title: "[Doc Error] "
+labels: ["documentation", "bug", "en"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an error in our documentation.
+        Please fill in the following information.
+
+  - type: dropdown
+    id: doc-language
+    attributes:
+      label: Document Language
+      description: Select the language of the problematic document
+      options:
+        - Japanese (ja/)
+        - English (en/)
+        - Draft (draft/)
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: doc-path
+    attributes:
+      label: Document Path
+      description: Enter the path to the problematic document (e.g., en/technical-articles/example.md)
+      placeholder: "e.g., en/technical-articles/rust-intro.md"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: error-type
+    attributes:
+      label: Error Type
+      description: Select the most appropriate option
+      options:
+        - Typo / Spelling error
+        - Technical error
+        - Broken link
+        - Code sample error
+        - Outdated information
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content (Incorrect Part)
+      description: Quote the problematic section
+      placeholder: |
+        Example:
+        ```
+        let x = 5
+        x = 10 // This line will cause a compile error
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-content
+    attributes:
+      label: Expected Content
+      description: Suggest how it should be corrected
+      placeholder: |
+        Example:
+        ```
+        let mut x = 5
+        x = 10 // The mut keyword is required
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other helpful information (optional)
+      placeholder: |
+        - Reference links
+        - Screenshots
+        - Other supplementary information
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have checked that this issue hasn't been reported already
+          required: true
+        - label: I have verified this with the latest version of the documentation
+          required: true

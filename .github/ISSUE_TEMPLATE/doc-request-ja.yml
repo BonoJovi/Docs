@@ -1,0 +1,119 @@
+name: 📝 新規ドキュメントのリクエスト
+description: 新しいドキュメントの作成をリクエスト
+title: "[Doc Request] "
+labels: ["documentation", "request", "ja"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        新しいドキュメントのリクエストをありがとうございます。
+        作成してほしいドキュメントについて教えてください。
+
+  - type: dropdown
+    id: doc-language
+    attributes:
+      label: 希望する言語
+      description: どの言語でドキュメントを作成してほしいですか
+      options:
+        - 日本語 (ja/)
+        - 英語 (en/)
+        - 両方
+    validations:
+      required: true
+
+  - type: input
+    id: doc-title
+    attributes:
+      label: ドキュメントのタイトル
+      description: 作成してほしいドキュメントのタイトルを記入してください
+      placeholder: "例：Rustでのエラーハンドリング入門"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: doc-category
+    attributes:
+      label: ドキュメントのカテゴリ
+      description: 最も適切なカテゴリを選択してください
+      options:
+        - 技術記事
+        - チュートリアル
+        - ガイド
+        - リファレンス
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: doc-purpose
+    attributes:
+      label: ドキュメントの目的
+      description: なぜこのドキュメントが必要なのか教えてください
+      placeholder: |
+        例：
+        - Rustのエラーハンドリングについて体系的に学べるドキュメントがない
+        - 初心者がつまずきやすいポイントをまとめたい
+        - 実践的なパターンを紹介したい
+    validations:
+      required: true
+
+  - type: textarea
+    id: doc-scope
+    attributes:
+      label: 希望する内容
+      description: どのような内容を含めてほしいか、具体的に教えてください
+      placeholder: |
+        例：
+        - Result型とOption型の基本的な使い方
+        - エラー型の定義方法
+        - thiserrorクレートの使用方法
+        - 実践的なエラーハンドリングパターン
+        - よくある間違いとその対処法
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-audience
+    attributes:
+      label: 想定読者層
+      description: このドキュメントのターゲット読者を選択してください
+      options:
+        - 初心者
+        - 中級者
+        - 上級者
+        - 全レベル
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-resources
+    attributes:
+      label: 参考資料
+      description: 参考になるリンクや資料があれば記入してください（任意）
+      placeholder: |
+        - 公式ドキュメント
+        - 参考にすべき記事
+        - 関連する書籍
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      description: どれくらい急ぎでこのドキュメントが必要ですか
+      options:
+        - 高（すぐに必要）
+        - 中（できれば近日中に）
+        - 低（時間があるときに）
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 貢献意欲
+      description: このドキュメント作成への貢献について（任意）
+      options:
+        - label: 自分で下書きを作成し、Pull Requestを送る意思があります
+          required: false
+        - label: レビューや改善提案で協力できます
+          required: false

@@ -37,6 +37,23 @@ This repository contains:
 - **Français** (`fr/`) : Contenu à venir (prévu)
 - **Deutschland** (`du/`): Zukünftige Inhalte (geplant)
 
+## Contributing
+
+We welcome contributions to improve the documentation!
+
+### How to Contribute
+
+- **Report an Error**: Found a typo or technical error? [Create an issue](../../issues/new/choose)
+- **Suggest Improvements**: Have ideas to improve existing documentation? [Share your proposal](../../issues/new/choose)
+- **Request New Documentation**: Need documentation on a specific topic? [Let us know](../../issues/new/choose)
+- **Submit Changes**: Ready to contribute? Check our [Contributing Guidelines](CONTRIBUTING.md) ([日本語版](CONTRIBUTING.ja.md))
+
+### Quick Links
+
+- [Contributing Guidelines](CONTRIBUTING.md) / [貢献ガイドライン](CONTRIBUTING.ja.md)
+- [Issue Templates](../../issues/new/choose)
+- [Pull Request Template](.github/pull_request_template.md)
+
 ## Author
 
 Yoshihiro NAKAHARA
